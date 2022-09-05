@@ -1,0 +1,19 @@
+.offcanvas{
+    /* position: relative; */
+}
+
+.offcanvas::after{
+    content: attr(data-flip);
+    background: greenyellow;
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    width: 12px;
+    height: 60px;
+    border-radius: 0px 85px 85px 0px;
+    text-align: center;
+    display: flex;
+    padding: auto;
+    line-height: 56px;
+    color: black;
+}

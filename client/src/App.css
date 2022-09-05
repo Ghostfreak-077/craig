@@ -1,3 +1,7 @@
+:root{
+  --bs-offcanvas-width: 400px !important;
+}
+
 .App {
   text-align: center;
 }

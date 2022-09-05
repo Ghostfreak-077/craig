@@ -1,0 +1,11 @@
+.profile-svg svg{
+    width: 35px;
+    /* aspect-ratio: 1; */
+    height: 35px;
+    fill: linear-gradient(to right, blue, green);
+}
+
+.header{
+    font-family: 'Dancing Script';
+    font-size: 2rem;
+}
