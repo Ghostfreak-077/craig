@@ -1,8 +1,9 @@
 .offcanvas{
     /* position: relative; */
+    /* pointer-events: none; */
 }
 
-.offcanvas::after{
+.button-aid::after{
     content: attr(data-flip);
     background: greenyellow;
     position: absolute;
@@ -16,4 +17,28 @@
     padding: auto;
     line-height: 56px;
     color: black;
+    pointer-events: all;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.timestamps{
+    list-style: none;
+    padding-left: 0px;
+    width: 70%;
+    margin: auto;
+    pointer-events: click;
+}
+
+.timestamp{
+    margin: 1rem auto;
+    padding: 5px 12px;
+    cursor: pointer;
+    /* z-index: 110; */
+}
+
+.timestamp-sel{
+    background: greenyellow;
+    color: black;
+    border-radius: 10px;
 }

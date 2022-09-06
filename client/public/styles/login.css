@@ -1,0 +1,27 @@
+.login-section {
+    width: 70%;
+    min-height: 70vh;
+    padding: 3rem;
+    margin-top: 5rem;
+    background: antiquewhite;
+    background-color: antiquewhite;
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
+    background-color: rgba(173, 255, 47, 0.47);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0px 0px 7px 2px greenyellow;
+}
+
+.login-img{
+    width: 330px;
+    margin: 2rem;
+}
+
+.inpts-user{
+    padding: 0px 1rem;
+    background: greenyellow;
+    border: 0px;
+    border-radius: 0px;
+    height: 30px;
+}

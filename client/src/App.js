@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Dates from './components/Dates';
 import './styles/main.css'
 import Header from './components/Header';
+import TaskDock from './components/TaskDock';
+import ReactRulesBust from './ReactRulesBust';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Dates/>
+      <ReactRulesBust/>
     </div>
   );
 }

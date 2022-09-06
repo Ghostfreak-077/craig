@@ -1,8 +1,15 @@
 body{
     background-color: black;
-    margin-left: var(--bs-offcanvas-width);
+    background: url(/public/img/197426635_cleanup_gimp.jpg) no-repeat;
+    background-size: 1560px ;
+    background-position: center 0%;
+    background-attachment: fixed;
 }
 
 .dates{
     z-index: 10;
+}
+
+.right-part{
+    transition: 0.25s;
 }

@@ -1,11 +1,35 @@
 .profile-svg svg{
     width: 35px;
     /* aspect-ratio: 1; */
-    height: 35px;
+    height: 27px;
     fill: linear-gradient(to right, blue, green);
+    margin: 15px 24px;
 }
 
 .header{
     font-family: 'Dancing Script';
     font-size: 2rem;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    box-shadow: 0px 0px 10px black;
+    z-index: 10;
+}
+
+.addtask{
+    padding: 1px 12px;
+font-size: 20px;
+border: 0px;
+border-radius: 10px;
+height: 40px;
+margin: auto 0px;
+background: greenyellow;
+}
+
+.addtask a{
+    color: black;
+text-decoration: none;
+font-family: sans-serif;
+font-size: medium;
+margin: 0px;
 }

@@ -1,0 +1,54 @@
+.addtask-section{
+    width: 70%;
+    /* height: 70vh; */
+    background: greenyellow;
+    margin: 5rem auto;
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
+    background-color: rgba(173, 255, 47, 0.47);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0px 0px 7px 2px greenyellow;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+}
+
+.addtask-img{
+
+}
+
+.addtask-section > div{
+    width: 70%;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0px;
+    color: aliceblue;
+}
+
+.addtask-section input, textarea{
+    width: 250px;
+    margin-left: 20px;
+}
+
+.addtask-section h3{
+    margin: 2rem;
+    color: aliceblue;
+}
+
+.addtask-btn{
+    margin: 3rem auto;
+    width: 80px;
+    border: 0px;
+    background: greenyellow;
+    border-radius: 7px;
+}
+
+.addtask-section input{
+    height: 40px;
+}
+
+.addtask-section textarea{
+    height: 100px;
+}

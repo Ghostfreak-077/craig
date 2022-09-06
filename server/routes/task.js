@@ -8,6 +8,12 @@ router.get('/read/:user',async (req,res)=>{
     res.json(notes)
 })
 
+router.put('/update/:id',async (req, res)=>{
+    // const updatedtasks = await task.findById(req.params.id)
+    const updatedtasks = await task.findByIdAndUpdate(req.params.id, {status:false})
+    res.json(updatedtasks)
+})
+
 router.post('/add', async (req,res)=>{
 
     const {title,desc, user} = req.body;
