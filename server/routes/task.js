@@ -28,5 +28,10 @@ router.post('/add', async (req,res)=>{
 
 })
 
+router.delete('/del/:id', async (req, res)=>{
+    const deletedTask = await task.findByIdAndDelete(req.params.id)
+    res.json(deletedTask)
+})
+
 
 module.exports = router

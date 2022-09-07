@@ -16,7 +16,7 @@ const ReactRulesBust = () => {
     const [timestamp, setTimestamp] = useState(86400000)
     const [lowerLimTimestamp, setLowerLimTimestamp] = useState(0)
     const [offcanvas, setOffcanvas] = useState('show')
-    const [user, setUser] = useState('partoo')
+    const [user, setUser] = useState('default')
 
     window.addEventListener('resize', () => {
         if (window.innerWidth < 1000) {

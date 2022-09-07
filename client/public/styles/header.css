@@ -33,3 +33,7 @@ font-family: sans-serif;
 font-size: medium;
 margin: 0px;
 }
+
+.header-logo img{
+    height: 60px;
+}
