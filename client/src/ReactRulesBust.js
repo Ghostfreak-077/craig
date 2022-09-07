@@ -13,7 +13,8 @@ import Addtask from './components/Addtask';
 
 const ReactRulesBust = () => {
 
-    const [timestamp, setTimestamp] = useState('today')
+    const [timestamp, setTimestamp] = useState(86400000)
+    const [lowerLimTimestamp, setLowerLimTimestamp] = useState(0)
     const [offcanvas, setOffcanvas] = useState('show')
     const [user, setUser] = useState('partoo')
 
@@ -29,13 +30,13 @@ const ReactRulesBust = () => {
     return (
         <>
             <div>
-                <Dates timestamp={timestamp} setTimestamp={setTimestamp} offcanvas={offcanvas} setOffcanvas={setOffcanvas} />
+                <Dates timestamp={timestamp} setTimestamp={setTimestamp} offcanvas={offcanvas} setOffcanvas={setOffcanvas} lowerLimTimestamp={lowerLimTimestamp} setLowerLimTimestamp={setLowerLimTimestamp} />
             </div>
             <div className="right-part" style={{ marginLeft: `${offcanvas==='show'?'400px':'0px'}` }}>
-                <Header user={user} />
+                <Header user={user} setUser={setUser} />
                 <BrowserRouter>
                     <Routes>
-                        <Route exact path="/" element={user==='default'?<><Login user={user} setUser={setUser}/></>:<><TaskDock timestamp={timestamp}/></>}/>
+                        <Route exact path="/" element={user==='default'?<><Login user={user} setUser={setUser}/></>:<><TaskDock timestamp={timestamp} lowerLimTimestamp={lowerLimTimestamp}/></>}/>
                         <Route exact path='/add' element={<Addtask user={user}/>}/>
                     </Routes>
                 </BrowserRouter>

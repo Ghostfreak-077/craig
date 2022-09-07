@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 const Dates = (props) => {
 
-  const {setOffcanvas,setTimestamp, timestamp, offcanvas} = props
+  const {setOffcanvas,setTimestamp, timestamp, offcanvas, lowerLimTimestamp, setLowerLimTimestamp} = props
 
   return (
     <div className='dates'>
@@ -17,12 +17,12 @@ const Dates = (props) => {
   </div>
   <div class="offcanvas-body">
     <ul className="timestamps text-start">
-      <li className={`timestamp ${timestamp==='today'?'timestamp-sel':''}`} onClick={()=>{setTimestamp('today')}}>Today</li>
-      <li className={`timestamp ${timestamp==='7days'?'timestamp-sel':''}`} onClick={()=>{setTimestamp('7days')}}>Last 7 days</li>
-      <li className={`timestamp ${timestamp==='month'?'timestamp-sel':''}`} onClick={()=>{setTimestamp('month')}}>Last Month</li>
-      <li className={`timestamp ${timestamp==='6months'?'timestamp-sel':''}`} onClick={()=>{setTimestamp('6months')}}>Last 6 Months</li>
-      <li className={`timestamp ${timestamp==='year'?'timestamp-sel':''}`} onClick={()=>{setTimestamp('year')}}>Last Year</li>
-      <li className={`timestamp ${timestamp==='many-years'?'timestamp-sel':''}`} onClick={()=>{setTimestamp('many-years')}}>More than a year ago</li>
+      <li className={`timestamp ${timestamp===86400000?'timestamp-sel':''}`} onClick={()=>{setTimestamp(86400000);setLowerLimTimestamp(0)}}>Today</li>
+      <li className={`timestamp ${timestamp===604800000?'timestamp-sel':''}`} onClick={()=>{setTimestamp(604800000);setLowerLimTimestamp(86400000)}}>Last 7 days</li>
+      <li className={`timestamp ${timestamp===2592000000?'timestamp-sel':''}`} onClick={()=>{setTimestamp(2592000000);setLowerLimTimestamp(604800000)}}>Last Month</li>
+      <li className={`timestamp ${timestamp===31536000000?'timestamp-sel':''}`} onClick={()=>{setTimestamp(31536000000);setLowerLimTimestamp(2592000000)}}>Last 1 year</li>
+      {/* <li className={`timestamp ${timestamp==='year'?'timestamp-sel':''}`} onClick={()=>{setTimestamp('year')}}>Last Year</li> */}
+      <li className={`timestamp ${timestamp===31536000001?'timestamp-sel':''}`} onClick={()=>{setTimestamp(31536000001);setLowerLimTimestamp(31536000000)}}>More than a year ago</li>
     </ul>
   </div>
 </div>
