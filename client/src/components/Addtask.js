@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Addtask = (props) => {
 
@@ -30,7 +31,6 @@ const Addtask = (props) => {
   return (
     <div className='addtask-section'>
       <link rel="stylesheet" href="/styles/addtask.css" />
-      {/* <img src="/img/add_task.png" alt="" className='addtask-img' /> */}
        <h3>Add a Task</h3>
        <div className="title">
         Title: <input type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}} name="title" id="title" />
@@ -38,7 +38,7 @@ const Addtask = (props) => {
        <div className="desc">
         Description: <textarea name="desc" value={desc} onChange={(e)=>{setDesc(e.target.value)}} id="desc" ></textarea>
        </div>
-       <button className="addtask-btn" onClick={()=>{addtask(title,desc)}}><a href='/'>Add</a></button>
+       <button className="addtask-btn" onClick={()=>{addtask(title,desc)}}><Link to='/'>Add</Link></button>
 
     </div>
   )

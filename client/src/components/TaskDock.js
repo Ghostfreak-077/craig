@@ -4,7 +4,7 @@ import { AiOutlineDelete } from 'react-icons/ai'
 
 const TaskDock = (props) => {
 
-    const { timestamp,lowerLimTimestamp } = props
+    const { timestamp,lowerLimTimestamp, user } = props
     const [task, setTask] = useState([])
     const host = 'http://localhost:5000'
     const [temp, setTemp] = useState(0)
@@ -34,7 +34,7 @@ const TaskDock = (props) => {
     }
 
     useEffect(() => {
-        fetchApi('/api/task/read/partoo', 'GET')
+        fetchApi(`/api/task/read/${user}`, 'GET')
         console.log(task);
     }, [timestamp, temp])
 
@@ -62,8 +62,7 @@ const TaskDock = (props) => {
                             <div className="task-text">
                                 <h3>{element.title}</h3>
                                 <p>{element.desc}</p>
-                                {/* {typeof(new Date(element.date))} */}
-                                {/* {element.status===false?'false':'true'} */}
+
                             </div>
                             <div className="task-btns d-flex">
                                 <button className="m-auto task-btns-left" onClick={()=>{updateTask(element._id)}} ><TiTickOutline /></button>

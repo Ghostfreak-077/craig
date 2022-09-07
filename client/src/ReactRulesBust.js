@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import Addtask from './components/Addtask';
+import Flash from './components/Flash';
 
 const ReactRulesBust = () => {
 
@@ -17,6 +18,8 @@ const ReactRulesBust = () => {
     const [lowerLimTimestamp, setLowerLimTimestamp] = useState(0)
     const [offcanvas, setOffcanvas] = useState('show')
     const [user, setUser] = useState('default')
+    const [password, setPassword] = useState('')
+    const [flash, setFlash] = useState({msg:'',category:''})
 
     window.addEventListener('resize', () => {
         if (window.innerWidth < 1000) {
@@ -33,10 +36,11 @@ const ReactRulesBust = () => {
                 <Dates timestamp={timestamp} setTimestamp={setTimestamp} offcanvas={offcanvas} setOffcanvas={setOffcanvas} lowerLimTimestamp={lowerLimTimestamp} setLowerLimTimestamp={setLowerLimTimestamp} />
             </div>
             <div className="right-part" style={{ marginLeft: `${offcanvas==='show'?'400px':'0px'}` }}>
-                <Header user={user} setUser={setUser} />
                 <BrowserRouter>
+                        <Header user={user} setUser={setUser} />
+                        <Flash flash={flash} setFlash={setFlash}/>
                     <Routes>
-                        <Route exact path="/" element={user==='default'?<><Login user={user} setUser={setUser}/></>:<><TaskDock timestamp={timestamp} lowerLimTimestamp={lowerLimTimestamp}/></>}/>
+                        <Route exact path="/" element={user==='default'?<><Login user={user} password={password} setPassword={setPassword} setUser={setUser} flash={flash} setFlash={setFlash} /></>:<><TaskDock timestamp={timestamp} lowerLimTimestamp={lowerLimTimestamp} user={user} setUser={setUser}/></>}/>
                         <Route exact path='/add' element={<Addtask user={user}/>}/>
                     </Routes>
                 </BrowserRouter>
