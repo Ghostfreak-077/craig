@@ -1,4 +1,4 @@
-# Craig
+# Craig (First Project under GDSC)
 A simple todo app built using MERN stack<br>
 Hosted using [Netlify](https://netlify.app/ "Netlify") and [Heroku](https://www.heroku.com "Heroku")<br>
 Visit the site [here](https://craig-app.netlify.app/ "Craig")
